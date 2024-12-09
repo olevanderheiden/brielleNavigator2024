@@ -1,53 +1,23 @@
 import React from "react";
-import {Button, StyleSheet, Text, View} from "react-native";
-import {black, blue200, white} from "react-native-paper/src/styles/themes/v2/colors";
+import { View, Text, Button } from "react-native";
+import { useTheme } from "../../objects/logic/theme"; // Import useTheme
+import { getStyles } from "../../styles"; // Import getStyles
 
 export default function SettingsView() {
+  const { theme, isDarkMode, setTheme } = useTheme(); // Get theme and theme-related info
 
-    return (
-        <View style={styles.container}>
-            <Text style={styles.title}>
-                settings
-            </Text>
-            <Button style={styles.button}
-                    // onPress={englishLangButton}
-                    title="English"
-                    accessibilityLabel="English language button"
-            />
+  const styles = getStyles(theme); // Get styles based on the current theme
 
-            <Button style={styles.button}
-                    // onPress={dutchLangButton}
-                    title="Nederlands"
-                    accessibilityLabel="Nederlandse taal knop"
-            />
-
-            <Button style={styles.button}
-                    // onPress={portugueseLangButton}
-                    title="Português"
-                    accessibilityLabel="Botão de idioma português"
-            />
-
-        </View>
-    )
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Settings</Text>
+      <Text>Current Theme: {isDarkMode ? "Dark" : "Light"}</Text>
+      <View style={styles.buttonContainer}>
+        <Button
+          title={`Switch to ${isDarkMode ? "Light" : "Dark"} Theme`} // Dynamically change the button text
+          onPress={() => setTheme(!isDarkMode)} // Toggle the theme
+        />
+      </View>
+    </View>
+  );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#eaeaea"
-    },
-    darkText: {
-        color: white,
-        fontSize: 30
-    },
-    lightText: {
-        color: black,
-        fontSize: 30
-    },
-    button: {
-        backgroundColor: blue200
-    },
-    title: {
-        textAlign: "center"
-    }
-})
