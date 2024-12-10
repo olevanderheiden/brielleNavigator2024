@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Text, View, Alert } from "react-native";
-import MapView, { Marker } from "react-native-maps";
+import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import * as Location from "expo-location"; // Import expo-location for location permissions
 import { useTheme } from "../../objects/logic/theme"; // Import useTheme to get the current theme
 import { getStyles } from "../../styles"; // Import getStyles to dynamically fetch the styles
 
 export default function ViewMap() {
   const { theme } = useTheme(); // Get the current theme from context
+  const styles = getStyles(theme);
   const [location, setLocation] = useState(null); // Store user location
   const [data, setData] = useState([]); // Store markers data
   const [loaded, setLoaded] = useState(false); // State to check if data is loaded
@@ -68,19 +69,20 @@ export default function ViewMap() {
   // If data or location is not loaded, display loading message
   if (!loaded || !region) {
     return (
-      <View style={getStyles(theme).loadingContainer}>
+      <View style={styles.loadingContainer}>
         <Text>Loading...</Text>
       </View>
     );
   }
 
   return (
-    <View style={getStyles(theme).container}>
+    <View style={styles.container}>
       <MapView
-        style={getStyles(theme).map}
+        style={styles.map}
+        provider={PROVIDER_GOOGLE}
         region={region} // Set the region dynamically based on user location or default
         onRegionChangeComplete={(region) => setRegion(region)} // Update region when the map is moved
-        customMapStyle={mapStyle} //
+        customMapStyle={styles.mapStyle}
       >
         {/* Render markers from the fetched data */}
         {data.map((landMark) => (

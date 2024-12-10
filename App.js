@@ -8,94 +8,17 @@ import Map from "./objects/pages/Map";
 import Home from "./objects/pages/Home";
 import Favorites from "./objects/pages/Favorites";
 import AsyncStorage from "@react-native-async-storage/async-storage"; // AsyncStorage
-import { ThemeProvider, useTheme } from "./objects/logic/theme"; // Your custom ThemeProvider and hook
-import { getStyles } from "./styles"; // Import styles function to apply theme dynamically
+import { ThemeProvider, useTheme } from "./objects/logic/theme";
+import { getStyles } from "./styles";
+import AppContent from "./objects/logic/navigationHandling";
 
 const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
-  const [lang, setLang] = useState("en");
-  const [isFavoritesVisible, setIsFavoritesVisible] = useState(false); // State to control visibility of Favorites tab
-
-  // Check AsyncStorage to determine if the Favorites tab should be shown
-  useEffect(() => {
-    const checkFavorites = async () => {
-      try {
-        const storedFavorites = await AsyncStorage.getItem("landMarks");
-        if (storedFavorites && JSON.parse(storedFavorites).length > 0) {
-          setIsFavoritesVisible(true); // Show the tab if there are stored favorites
-        } else {
-          setIsFavoritesVisible(false); // Hide the tab if no favorites are found
-        }
-      } catch (error) {
-        console.error("Error checking AsyncStorage: ", error);
-        setIsFavoritesVisible(false); // Default to hidden if there is an error
-      }
-    };
-
-    checkFavorites(); // Run the check on mount
-  }, []); // Empty dependency array so it runs once on mount
-
   return (
-    // Wrap the entire app in both ThemeProvider and PaperProvider
     <ThemeProvider>
       <PaperProvider>
-        <NavigationContainer>
-          <Tab.Navigator
-            screenOptions={{
-              tabBarStyle: {
-                backgroundColor: "#f8f8f8", // Or apply dynamic styles here
-              },
-            }}
-          >
-            <Tab.Screen
-              name="Home"
-              component={Home}
-              options={{
-                tabBarIcon: ({ color }) => (
-                  <MaterialCommunityIcons name="home" color={color} size={26} />
-                ),
-              }}
-            />
-            <Tab.Screen
-              name="Map"
-              component={Map}
-              options={{
-                tabBarIcon: ({ color }) => (
-                  <MaterialCommunityIcons
-                    name="map-search"
-                    color={color}
-                    size={26}
-                  />
-                ),
-              }}
-            />
-            {isFavoritesVisible && (
-              <Tab.Screen
-                name="Favorites"
-                component={Favorites}
-                options={{
-                  tabBarIcon: ({ color }) => (
-                    <MaterialCommunityIcons
-                      name="star"
-                      color={color}
-                      size={26}
-                    />
-                  ),
-                }}
-              />
-            )}
-            <Tab.Screen
-              name="Settings"
-              component={SettingsView}
-              options={{
-                tabBarIcon: ({ color }) => (
-                  <MaterialCommunityIcons name="cog" color={color} size={26} />
-                ),
-              }}
-            />
-          </Tab.Navigator>
-        </NavigationContainer>
+        <AppContent />
       </PaperProvider>
     </ThemeProvider>
   );

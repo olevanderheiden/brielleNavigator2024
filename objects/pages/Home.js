@@ -1,9 +1,13 @@
-import { View,Text } from "react-native";
+import { View, Text } from "react-native";
+import { useTheme } from "../../objects/logic/theme";
+import { getStyles } from "../../styles";
 
 export default function HomeView() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!</Text>
-      </View>
-    );
-  }
+  const { theme } = useTheme();
+  const styles = getStyles(theme);
+  return (
+    <View style={styles.View}>
+      <Text style={styles.title}>Home!</Text>
+    </View>
+  );
+}

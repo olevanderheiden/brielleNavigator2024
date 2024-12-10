@@ -11,7 +11,9 @@ export default function SettingsView() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Settings</Text>
-      <Text>Current Theme: {isDarkMode ? "Dark" : "Light"}</Text>
+      <Text style={styles.text}>
+        Current Theme: {isDarkMode ? "Dark" : "Light"}
+      </Text>
       <View style={styles.buttonContainer}>
         <Button
           title={`Switch to ${isDarkMode ? "Light" : "Dark"} Theme`} // Dynamically change the button text
