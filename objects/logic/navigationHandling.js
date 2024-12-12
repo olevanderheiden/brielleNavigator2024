@@ -12,7 +12,6 @@ import SettingsView from "../pages/Settings";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function AppContent() {
-  const [lang, setLang] = useState("en");
   const { theme } = useTheme(); // Get the current theme from context
   const styles = getStyles(theme);
   const [isFavoritesVisible, setIsFavoritesVisible] = useState(false); // State to control visibility of Favorites tab

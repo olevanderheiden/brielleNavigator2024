@@ -13,6 +13,22 @@ export const getStyles = (theme) => {
       width: "100%",
       height: "100%",
     },
+    callout: {
+      flex: 1,
+      position: "relative",
+      padding: 10,
+      backgroundColor: "white",
+      borderRadius: 10,
+      width: 150,
+    },
+    calloutTitle: {
+      fontWeight: "bold",
+      fontSize: 16,
+      marginBottom: 5,
+    },
+    calloutDescription: {
+      fontSize: 14,
+    },
     mapStyle: [
       {
         elementType: "geometry",
