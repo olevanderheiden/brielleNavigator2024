@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Text, View, Alert } from "react-native";
-import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
+import MapView, { Marker, Callout } from "react-native-maps";
 import * as Location from "expo-location"; // Import expo-location for location permissions
 import { useTheme } from "../../objects/logic/theme"; // Import useTheme to get the current theme
 import { getStyles } from "../../styles"; // Import getStyles to dynamically fetch the styles
+import updateFavoriteStatus from "../logic/favoritesHandling"; // Import the function to update favorite status
 
 export default function ViewMap() {
   const { theme } = useTheme(); // Get the current theme from context
   const styles = getStyles(theme);
+  const [favorites, setFavorites] = useState([]); // Store favorite landmarks
   const [location, setLocation] = useState(null); // Store user location
-  const [data, setData] = useState([]); // Store markers data
+  const [data, setData] = useState([]);
   const [loaded, setLoaded] = useState(false); // State to check if data is loaded
   const [region, setRegion] = useState(null); // To store and update the map region
 
@@ -70,7 +72,7 @@ export default function ViewMap() {
   if (!loaded || !region) {
     return (
       <View style={styles.loadingContainer}>
-        <Text>Loading...</Text>
+        <Text style={styles.title}>Loading...</Text>
       </View>
     );
   }
@@ -79,7 +81,6 @@ export default function ViewMap() {
     <View style={styles.container}>
       <MapView
         style={styles.map}
-        provider={PROVIDER_GOOGLE}
         region={region} // Set the region dynamically based on user location or default
         onRegionChangeComplete={(region) => setRegion(region)} // Update region when the map is moved
         customMapStyle={styles.mapStyle}
@@ -94,6 +95,10 @@ export default function ViewMap() {
             }}
             title={landMark.title.nl}
             description={landMark.description.nl}
+            pinColor={
+              favorites.some((fav) => fav.id === landMark.id) ? "gold" : "red"
+            }
+            onPress={() => updateFavoriteStatus(landMark)}
           />
         ))}
 
@@ -104,8 +109,9 @@ export default function ViewMap() {
               latitude: location.latitude,
               longitude: location.longitude,
             }}
+            pinColor="blue"
             title="Your Location"
-            pinColor="blue" // Custom marker color (blue for user's location)
+            description="You are here"
           />
         )}
       </MapView>

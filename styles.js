@@ -17,7 +17,7 @@ export const getStyles = (theme) => {
       flex: 1,
       position: "relative",
       padding: 10,
-      backgroundColor: "white",
+      backgroundColor: theme.colors.surface,
       borderRadius: 10,
       width: 150,
     },
@@ -67,6 +67,7 @@ export const getStyles = (theme) => {
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
+      backgroundColor: theme.colors.background,
     },
     title: {
       fontSize: 24,

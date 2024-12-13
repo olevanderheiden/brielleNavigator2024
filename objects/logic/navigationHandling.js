@@ -1,4 +1,3 @@
-const Tab = createMaterialBottomTabNavigator();
 import React, { useEffect, useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialBottomTabNavigator } from "react-native-paper/react-navigation";
@@ -11,6 +10,8 @@ import Favorites from "../pages/Favorites";
 import SettingsView from "../pages/Settings";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+const Tab = createMaterialBottomTabNavigator();
+
 export default function AppContent() {
   const { theme } = useTheme(); // Get the current theme from context
   const styles = getStyles(theme);
@@ -20,7 +21,7 @@ export default function AppContent() {
   useEffect(() => {
     const checkFavorites = async () => {
       try {
-        const storedFavorites = await AsyncStorage.getItem("landMarks");
+        const storedFavorites = await AsyncStorage.getItem("@favorites");
         if (storedFavorites && JSON.parse(storedFavorites).length > 0) {
           setIsFavoritesVisible(true); // Show the tab if there are stored favorites
         } else {
