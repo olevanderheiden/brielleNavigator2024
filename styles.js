@@ -113,5 +113,42 @@ export const getStyles = (theme) => {
     buttonText: {
       color: theme.colors.onAccent,
     },
+    toastSuccess: {
+      backgroundColor: theme.colors.background,
+      borderColor: "rgba(3, 252, 15, 0.29)",
+      borderWidth: 1,
+      padding: 10,
+    },
+    toastInfo: {
+      backgroundColor: theme.colors.background,
+      borderColor: "rgba(3, 127, 252, 1)",
+      borderWidth: 1,
+      padding: 10,
+    },
+    toastSuccessBar: {
+      width: 5,
+
+      backgroundColor: "rgba(3, 252, 15, 0.29)",
+      flex: 0.05,
+    },
+    toastInfoBar: {
+      width: 5,
+      height: "10%",
+      backgroundColor: "rgba(3, 127, 252, 1)",
+      flex: 0.05,
+    },
+    toastContainer: {
+      flexDirection: "row",
+      alignItems: "center",
+      backgroundColor: theme.colors.background,
+      borderColor: theme.colors.border,
+      borderWidth: 1,
+      borderRadius: 5,
+      maxHeight: 80,
+    },
+    toastContent: {
+      flex: 0.95,
+      paddingLeft: 10,
+    },
   });
 };

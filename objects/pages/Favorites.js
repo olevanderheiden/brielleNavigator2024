@@ -51,7 +51,7 @@ export default function FavoritesView() {
       <View style={styles.buttonContainer}>
         <Button
           onPress={() =>
-            updateFavoriteStatus(landMarkObject, () => setLoaded(false))
+            updateFavoriteStatus(landMarkObject, () => setLoaded(false), styles)
           }
         >
           <Text style={styles.buttonText}>verwijder uit favorieten</Text>

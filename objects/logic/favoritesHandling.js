@@ -1,8 +1,12 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { checkFavorites } from "./navigationHandling";
-import Toast from "react-native-toast-message";
+import favoritesToast from "./toastHandling";
 
-export default async function updateFavoriteStatus(landMark, changeLoaded) {
+export default async function updateFavoriteStatus(
+  landMark,
+  changeLoaded,
+  styles
+) {
   if (!landMark || !landMark.id) {
     console.error("Invalid landmark object", landMark);
     return;
@@ -21,22 +25,14 @@ export default async function updateFavoriteStatus(landMark, changeLoaded) {
 
     if (index !== -1) {
       // Remove the landmark from favorites
-      Toast.show({
-        type: "info",
-        text1: "Removed from Favorites",
-        text2: landMark.title.nl,
-      });
+      favoritesToast(landMark, false, styles);
       favorites.splice(index, 1);
       console.log("Landmark removed from favorites");
     } else {
       // Add the landmark to favorites
       favorites.push(landMark);
       console.log("Landmark added to favorites");
-      Toast.show({
-        type: "success",
-        text1: "Favorite Added",
-        text2: landMark.title.nl,
-      });
+      favoritesToast(landMark, true, styles);
     }
 
     await AsyncStorage.setItem("@favorites", JSON.stringify(favorites));

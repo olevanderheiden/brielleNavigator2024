@@ -4,6 +4,7 @@ import { Provider as PaperProvider } from "react-native-paper"; // Provider from
 import { ThemeProvider } from "./objects/logic/theme";
 import AppContent from "./objects/logic/navigationHandling";
 import Toast from "react-native-toast-message"; // Import Toast
+import ToastConfig from "./objects/logic/toastConfig"; // Import ToastConfig
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -12,7 +13,7 @@ export default function App() {
     <ThemeProvider>
       <PaperProvider>
         <AppContent />
-        <Toast ref={(ref) => Toast.setRef(ref)} /> {/* Add Toast component */}
+        <Toast config={ToastConfig} ref={(ref) => Toast.setRef(ref)} />
       </PaperProvider>
     </ThemeProvider>
   );

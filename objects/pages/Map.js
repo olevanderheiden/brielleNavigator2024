@@ -98,7 +98,7 @@ export default function ViewMap() {
             pinColor={
               favorites.some((fav) => fav.id === landMark.id) ? "gold" : "red"
             }
-            onPress={() => updateFavoriteStatus(landMark)}
+            onPress={() => updateFavoriteStatus(landMark, null, styles)}
           />
         ))}
 
