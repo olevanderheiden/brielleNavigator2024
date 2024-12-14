@@ -12,27 +12,30 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Tab = createMaterialBottomTabNavigator();
 
+let isFavoritesVisible = false;
+let setIsFavoritesVisible = () => {};
+
+export const checkFavorites = async () => {
+  try {
+    const storedFavorites = await AsyncStorage.getItem("@favorites");
+    if (storedFavorites && JSON.parse(storedFavorites).length > 0) {
+      setIsFavoritesVisible(true); // Show the tab if there are stored favorites
+    } else {
+      setIsFavoritesVisible(false); // Hide the tab if no favorites are found
+    }
+  } catch (error) {
+    console.error("Error checking AsyncStorage: ", error);
+    setIsFavoritesVisible(false); // Default to hidden if there is an error
+  }
+};
+
 export default function AppContent() {
   const { theme } = useTheme(); // Get the current theme from context
   const styles = getStyles(theme);
-  const [isFavoritesVisible, setIsFavoritesVisible] = useState(false); // State to control visibility of Favorites tab
+  const [favoritesVisible, setFavoritesVisible] = useState(isFavoritesVisible);
+  setIsFavoritesVisible = setFavoritesVisible;
 
-  // Check AsyncStorage to determine if the Favorites tab should be shown
   useEffect(() => {
-    const checkFavorites = async () => {
-      try {
-        const storedFavorites = await AsyncStorage.getItem("@favorites");
-        if (storedFavorites && JSON.parse(storedFavorites).length > 0) {
-          setIsFavoritesVisible(true); // Show the tab if there are stored favorites
-        } else {
-          setIsFavoritesVisible(false); // Hide the tab if no favorites are found
-        }
-      } catch (error) {
-        console.error("Error checking AsyncStorage: ", error);
-        setIsFavoritesVisible(false); // Default to hidden if there is an error
-      }
-    };
-
     checkFavorites();
   }, []);
 
@@ -87,7 +90,7 @@ export default function AppContent() {
             ),
           }}
         />
-        {isFavoritesVisible && (
+        {favoritesVisible && (
           <Tab.Screen
             name="Favorites"
             component={Favorites}

@@ -1,4 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { checkFavorites } from "./navigationHandling";
 
 export default async function updateFavoriteStatus(landMark, changeLoaded) {
   if (!landMark || !landMark.id) {
@@ -31,6 +32,7 @@ export default async function updateFavoriteStatus(landMark, changeLoaded) {
     if (changeLoaded) {
       changeLoaded();
     }
+    checkFavorites(); // Check and update the visibility of the Favorites tab
   } catch (e) {
     console.error("Failed to update the favorite status", e);
   }
