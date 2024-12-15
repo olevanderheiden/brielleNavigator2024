@@ -92,6 +92,12 @@ export const getStyles = (theme) => {
       alignItems: "center",
       backgroundColor: theme.colors.background,
     },
+    header: {
+      backgroundColor: theme.colors.background,
+      color: theme.colors.onBackground,
+      borderBottomColor: theme.colors.border,
+      borderBottomWidth: 1,
+    },
     tabBar: {
       backgroundColor: theme.colors.background,
     },

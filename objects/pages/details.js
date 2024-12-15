@@ -7,16 +7,22 @@ export default function Details({ route }) {
   // Get styles from theme
   const { theme } = useTheme();
   const styles = getStyles(theme);
-  // Destructure parameters passed from navigation
-  const { title, description } = route.params;
+  // Destructure landmark object passed from navigation
+  const { landMarkObject } = route.params;
+  const { title, description, latitude, longitude } = landMarkObject;
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       {/* Title */}
-      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.title}>{title.nl}</Text>
 
       {/* Description */}
-      <Text style={styles.text}>{description}</Text>
+      <Text style={styles.text}>{description.nl}</Text>
+
+      {/* Coordinates */}
+      <Text style={styles.text}>
+        Coordinaten: {latitude}, {longitude}
+      </Text>
     </ScrollView>
   );
 }

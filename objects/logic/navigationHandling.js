@@ -127,7 +127,17 @@ export default function AppContent() {
             </Tab.Navigator>
           )}
         </Stack.Screen>
-        <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen
+          name="Details"
+          component={Details}
+          options={{
+            headerBackTitleVisible: true,
+            headerStyle: {
+              backgroundColor: styles.header.backgroundColor,
+            },
+            headerTintColor: styles.header.color,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

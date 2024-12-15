@@ -60,8 +60,7 @@ export default function FavoritesView() {
         <Button
           onPress={() =>
             navigation.navigate("Details", {
-              title: landMarkObject.title.nl,
-              description: landMarkObject.description.nl,
+              landMarkObject: landMarkObject,
             })
           }
         >
