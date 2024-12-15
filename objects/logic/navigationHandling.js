@@ -9,8 +9,11 @@ import Map from "../pages/Map";
 import Favorites from "../pages/Favorites";
 import SettingsView from "../pages/Settings";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { createStackNavigator } from "@react-navigation/stack";
+import Details from "../pages/details";
 
 const Tab = createMaterialBottomTabNavigator();
+const Stack = createStackNavigator();
 
 let isFavoritesVisible = false;
 let setIsFavoritesVisible = () => {};
@@ -41,84 +44,91 @@ export default function AppContent() {
 
   return (
     <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName="Home"
-        barStyle={styles.tabBar} // Use styles from styles.js
-        screenOptions={({ route }) => ({
-          tabBarIcon: ({ color, size }) => {
-            const iconName = iconMapping[route.name];
-            return (
-              <MaterialCommunityIcons
-                name={iconName}
-                color={color || styles.tabBarIcon.color}
-                size={size || styles.tabBarIcon.size}
+      <Stack.Navigator>
+        <Stack.Screen name="MainTabs" options={{ headerShown: false }}>
+          {() => (
+            <Tab.Navigator
+              initialRouteName="Home"
+              barStyle={styles.tabBar} // Use styles from styles.js
+              screenOptions={({ route }) => ({
+                tabBarIcon: ({ color, size }) => {
+                  const iconName = iconMapping[route.name];
+                  return (
+                    <MaterialCommunityIcons
+                      name={iconName}
+                      color={color || styles.tabBarIcon.color}
+                      size={size || styles.tabBarIcon.size}
+                    />
+                  );
+                },
+                tabBarLabelStyle: {
+                  color: styles.tabBarLabel.color,
+                },
+                tabBarActiveTintColor: styles.tabBarActiveLabel.color,
+                tabBarStyle: {
+                  backgroundColor: styles.tabBar.backgroundColor,
+                },
+              })}
+            >
+              <Tab.Screen
+                name="Home"
+                component={Home}
+                options={{
+                  tabBarIcon: ({ color }) => (
+                    <MaterialCommunityIcons
+                      name="home"
+                      color={styles.tabBarIcon.color}
+                      size={styles.tabBarIcon.size}
+                    />
+                  ),
+                }}
               />
-            );
-          },
-          tabBarLabelStyle: {
-            color: styles.tabBarLabel.color,
-          },
-          tabBarActiveTintColor: styles.tabBarActiveLabel.color,
-          tabBarStyle: {
-            backgroundColor: styles.tabBar.backgroundColor,
-          },
-        })}
-      >
-        <Tab.Screen
-          name="Home"
-          component={Home}
-          options={{
-            tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons
-                name="home"
-                color={styles.tabBarIcon.color}
-                size={styles.tabBarIcon.size}
+              <Tab.Screen
+                name="Map"
+                component={Map}
+                options={{
+                  tabBarIcon: ({ color }) => (
+                    <MaterialCommunityIcons
+                      name="map-search"
+                      color={styles.tabBarIcon.color}
+                      size={styles.tabBarIcon.size}
+                    />
+                  ),
+                }}
               />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Map"
-          component={Map}
-          options={{
-            tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons
-                name="map-search"
-                color={styles.tabBarIcon.color}
-                size={styles.tabBarIcon.size}
-              />
-            ),
-          }}
-        />
-        {favoritesVisible && (
-          <Tab.Screen
-            name="Favorites"
-            component={Favorites}
-            options={{
-              tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons
-                  name="star"
-                  color={styles.tabBarIcon.color}
-                  size={styles.tabBarIcon.size}
+              {favoritesVisible && (
+                <Tab.Screen
+                  name="Favorites"
+                  component={Favorites}
+                  options={{
+                    tabBarIcon: ({ color }) => (
+                      <MaterialCommunityIcons
+                        name="star"
+                        color={styles.tabBarIcon.color}
+                        size={styles.tabBarIcon.size}
+                      />
+                    ),
+                  }}
                 />
-              ),
-            }}
-          />
-        )}
-        <Tab.Screen
-          name="Settings"
-          component={SettingsView}
-          options={{
-            tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons
-                name="cog"
-                color={styles.tabBarIcon.color}
-                size={styles.tabBarIcon.size}
+              )}
+              <Tab.Screen
+                name="Settings"
+                component={SettingsView}
+                options={{
+                  tabBarIcon: ({ color }) => (
+                    <MaterialCommunityIcons
+                      name="cog"
+                      color={styles.tabBarIcon.color}
+                      size={styles.tabBarIcon.size}
+                    />
+                  ),
+                }}
               />
-            ),
-          }}
-        />
-      </Tab.Navigator>
+            </Tab.Navigator>
+          )}
+        </Stack.Screen>
+        <Stack.Screen name="Details" component={Details} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

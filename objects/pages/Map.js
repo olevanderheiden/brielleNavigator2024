@@ -5,10 +5,12 @@ import * as Location from "expo-location"; // Import expo-location for location 
 import { useTheme } from "../../objects/logic/theme"; // Import useTheme to get the current theme
 import { getStyles } from "../../styles"; // Import getStyles to dynamically fetch the styles
 import updateFavoriteStatus from "../logic/favoritesHandling"; // Import the function to update favorite status
+import { useNavigation } from "@react-navigation/native";
 
 export default function ViewMap() {
   const { theme } = useTheme(); // Get the current theme from context
   const styles = getStyles(theme);
+  const navigation = useNavigation();
   const [favorites, setFavorites] = useState([]); // Store favorite landmarks
   const [location, setLocation] = useState(null); // Store user location
   const [data, setData] = useState([]);
@@ -99,6 +101,12 @@ export default function ViewMap() {
               favorites.some((fav) => fav.id === landMark.id) ? "gold" : "red"
             }
             onPress={() => updateFavoriteStatus(landMark, null, styles)}
+            onLongPress={() =>
+              navigation.navigate("Details", {
+                title: landMark.title.nl,
+                description: landMark.description.nl,
+              })
+            }
           />
         ))}
 

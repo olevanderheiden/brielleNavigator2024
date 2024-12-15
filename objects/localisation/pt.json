@@ -1,6 +1,14 @@
 {
-  "welcome": "Welcome to tourism navigator!",
-  "Settings": "settings",
-  "Home": "Home",
-  "Favorites": "Favorites"
+  "Welcome": "Bem-vindo ao Brielle Navigator 2024!",
+  "Settings": "Configurações",
+  "Home": "Início",
+  "Favorites": "Favoritos",
+  "FavoritesList": "Lista de Favoritos",
+  "500": "Opa, algo deu errado! Tente novamente mais tarde.",
+  "400": "Opa, você fez algo errado! Verifique se você preencheu tudo corretamente.",
+  "loading": "Carregando...",
+  "permissionExplanation": "Este aplicativo precisa de permissão para usar sua localização. Isso é necessário para mostrar sua localização atual no mapa. Conceda as permissões necessárias para usar este aplicativo.",
+  "ListView": "Visão Geral",
+  "overview": "Visão Geral",
+  "settings": "Configurações"
 }

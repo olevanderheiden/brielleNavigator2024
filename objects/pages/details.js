@@ -1,7 +1,12 @@
-import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import React from "react";
+import { Text, ScrollView } from "react-native";
+import useTheme from "../logic/theme";
+import getStyles from "../../styles";
 
 export default function Details({ route }) {
+  // Get styles from theme
+  const { theme } = useTheme();
+  const styles = getStyles(theme);
   // Destructure parameters passed from navigation
   const { title, description } = route.params;
 
@@ -11,26 +16,7 @@ export default function Details({ route }) {
       <Text style={styles.title}>{title}</Text>
 
       {/* Description */}
-      <Text style={styles.description}>{description}</Text>
+      <Text style={styles.text}>{description}</Text>
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flexGrow: 1,
-    padding: 16,
-    backgroundColor: '#fff',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 16,
-  },
-  description: {
-    fontSize: 16,
-    lineHeight: 24,
-    textAlign: 'justify',
-  },
-});

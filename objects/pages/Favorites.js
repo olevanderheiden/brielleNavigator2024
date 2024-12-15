@@ -5,7 +5,7 @@ import { useTheme } from "../../objects/logic/theme";
 import { getStyles } from "../../styles";
 import { Button } from "react-native-paper";
 import updateFavoriteStatus from "../logic/favoritesHandling";
-import { useFocusEffect } from "@react-navigation/native";
+import { useFocusEffect, useNavigation } from "@react-navigation/native";
 
 export function changeLoaded() {
   setLoaded(false);
@@ -13,6 +13,7 @@ export function changeLoaded() {
 export default function FavoritesView() {
   const { theme } = useTheme();
   const styles = getStyles(theme);
+  const navigation = useNavigation(); // Get the navigation object
 
   console.log("FavoritesView rendered");
   // Initialize state for local data and loading status
@@ -56,7 +57,14 @@ export default function FavoritesView() {
         >
           <Text style={styles.buttonText}>verwijder uit favorieten</Text>
         </Button>
-        <Button>
+        <Button
+          onPress={() =>
+            navigation.navigate("Details", {
+              title: landMarkObject.title.nl,
+              description: landMarkObject.description.nl,
+            })
+          }
+        >
           <Text style={styles.buttonText}>details</Text>
         </Button>
       </View>
