@@ -1,5 +1,10 @@
 {
-  "Welcome": "Welcome to tourism navigator!",
+  "Welcome": "Welcome to Brielle Navigator 2024!",
+  "intro": "This app helps you explore landmarks in Brielle. Here's how it works:",
+  "mapInstructions": "- Open the Map menu to see where landmarks are located.",
+  "favoritesInstructions": "- Tap on a landmark to add it to your favorites.",
+  "settingsInstructions": "- In the Settings menu, you can change the theme of the app from light to dark and change the app's language.",
+  "enjoy": "Enjoy exploring Brielle with Brielle Navigator 2024!",
   "Settings": "settings",
   "Home": "Home",
   "Favorites": "Favorites",
@@ -10,5 +15,6 @@
   "ListView": "List",
   "overview": "Overview",
   "settings": "Settings",
+
   "permissionExplanation": "This app requires location data to acuratly show your location on the mapp. please give the required permissions to use this app."
 }

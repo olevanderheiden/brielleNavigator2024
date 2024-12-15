@@ -1,5 +1,10 @@
 {
   "Welcome": "Bem-vindo ao Brielle Navigator 2024!",
+  "intro": "Este aplicativo ajuda você a explorar os pontos turísticos de Brielle. Veja como funciona:",
+  "mapInstructions": "- Abra o menu do mapa para ver onde os pontos turísticos estão localizados.",
+  "favoritesInstructions": "- Toque em um ponto turístico para adicioná-lo aos seus favoritos.",
+  "settingsInstructions": "- No menu de configurações, você pode alterar o tema do aplicativo de claro para escuro e alterar o idioma do aplicativo.",
+  "enjoy": "Aproveite a exploração de Brielle com o Brielle Navigator 2024!",
   "Settings": "Configurações",
   "Home": "Início",
   "Favorites": "Favoritos",

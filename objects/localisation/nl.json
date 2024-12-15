@@ -1,5 +1,10 @@
 {
   "Welcome": "Welkom bij Brielle Navigator 2024!",
+  "intro": "Deze app helpt je om de bezienswaardigheden in Brielle te verkennen. Zo werkt het:",
+  "mapInstructions": "- Open het kaartmenu om te zien waar de bezienswaardigheden zich bevinden.",
+  "favoritesInstructions": "- Tik op een bezienswaardigheid om deze aan je favorieten toe te voegen.",
+  "settingsInstructions": "- In het instellingenmenu kun je het thema van de app van licht naar donker veranderen en de taal van de app wijzigen.",
+  "enjoy": "Veel plezier met het verkennen van Brielle met Brielle Navigator 2024!",
   "Settings": "Instellingen",
   "Home": "Thuis",
   "Favorites": "Favorieten",
