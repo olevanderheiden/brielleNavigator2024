@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, ScrollView } from "react-native";
-import useTheme from "../logic/theme";
-import getStyles from "../../styles";
+import { useTheme } from "../logic/theme";
+import { getStyles } from "../../styles";
 
 export default function Details({ route }) {
   // Get styles from theme
