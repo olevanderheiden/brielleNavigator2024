@@ -81,10 +81,22 @@ export const getStyles = (theme) => {
       marginBottom: 20,
     },
     buttonContainer: {
-      marginTop: 20,
+      flexDirection: "row",
+      justifyContent: "space-between",
     },
     buttonStyle: {
-      backgroundColor: theme.colors.accent,
+      color: theme.colors.onBackground,
+      backgroundColor: theme.colors.primary,
+      width: "45%",
+      height: 50,
+      justifyContent: "center",
+      margin: 4,
+    },
+    devider: {
+      height: 1,
+      backgroundColor: theme.colors.onBackground,
+      width: "100%",
+      marginBottom: 10,
     },
     View: {
       flex: 1,
@@ -117,13 +129,14 @@ export const getStyles = (theme) => {
       backgroundColor: theme.colors.background,
     },
     buttonText: {
-      color: theme.colors.onAccent,
+      color: theme.colors.onBackground,
+      fontSize: 10,
     },
     toastSuccess: {
       backgroundColor: theme.colors.background,
       borderColor: "rgba(3, 252, 15, 0.29)",
       borderWidth: 1,
-      padding: 10,
+      padding: 12,
     },
     toastInfo: {
       backgroundColor: theme.colors.background,

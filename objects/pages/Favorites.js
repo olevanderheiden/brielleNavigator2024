@@ -1,11 +1,12 @@
 import { useEffect, useState, useCallback } from "react";
-import { FlatList, Text, View } from "react-native";
+import { FlatList, Text, View, StyleSheet } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useTheme } from "../../objects/logic/theme";
 import { getStyles } from "../../styles";
 import { Button } from "react-native-paper";
 import updateFavoriteStatus from "../logic/favoritesHandling";
 import { useFocusEffect, useNavigation } from "@react-navigation/native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export function changeLoaded() {
   setLoaded(false);
@@ -51,22 +52,27 @@ export default function FavoritesView() {
       </Text>
       <View style={styles.buttonContainer}>
         <Button
+          mode="contained"
           onPress={() =>
             updateFavoriteStatus(landMarkObject, () => setLoaded(false), styles)
           }
+          style={styles.buttonStyle}
         >
-          <Text style={styles.buttonText}>verwijder uit favorieten</Text>
+          <Text style={styles.buttonText}>Verwijderen</Text>
         </Button>
         <Button
+          mode="contained"
           onPress={() =>
             navigation.navigate("Details", {
               landMarkObject: landMarkObject,
             })
           }
+          style={styles.buttonStyle}
         >
-          <Text style={styles.buttonText}>details</Text>
+          <Text style={styles.buttonText}>Details</Text>
         </Button>
       </View>
+      <View style={styles.devider} />
     </View>
   );
 
@@ -93,14 +99,14 @@ export default function FavoritesView() {
     );
   } else {
     return (
-      <View style={styles.View}>
+      <SafeAreaView style={styles.View}>
         <Text style={styles.title}>Favorites List</Text>
         <FlatList
           data={localData}
           renderItem={({ item }) => <Item landMarkObject={item} />}
           keyExtractor={(item, index) => index.toString()} // Ensure keyExtractor is set
         />
-      </View>
+      </SafeAreaView>
     );
   }
 }
