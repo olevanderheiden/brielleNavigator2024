@@ -12,8 +12,8 @@
         "nl": "Een prachtige gotische kerk in het hart van Brielle, bekend om zijn torenhoge torenspits en rijke geschiedenis.",
         "pt": "Uma impressionante igreja gótica localizada no coração de Brielle, conhecida por sua torre alta e rica história."
       },
-      "latitude": 51.9017,
-      "longitude": 4.163
+      "latitude": 51.90311,
+      "longitude": 4.16238
     },
     {
       "id": "1",
@@ -42,8 +42,8 @@
         "nl": "Een pittoreske haven gevuld met historische schepen, die het maritieme erfgoed van Brielle weerspiegelt.",
         "pt": "Um porto pitoresco cheio de navios históricos, refletindo a herança marítima de Brielle."
       },
-      "latitude": 51.9025,
-      "longitude": 4.1641
+      "latitude": 51.901142425058985,
+      "longitude": 4.165702144156027
     },
     {
       "id": "3",
@@ -57,23 +57,23 @@
         "nl": "Een goed bewaard voorbeeld van 17e-eeuwse Nederlandse militaire architectuur die de stad omringt.",
         "pt": "Um exemplo bem preservado da arquitetura militar holandesa do século XVII que cerca a cidade."
       },
-      "latitude": 51.902,
-      "longitude": 4.165
+      "latitude": 51.89996807908493,
+      "longitude": 4.164225479591919
     },
     {
       "id": "4",
       "title": {
-        "en": "Geuzen Gate",
-        "nl": "Geuzenpoort",
-        "pt": "Portão dos Mendigos"
+        "en": "Lange Poort",
+        "nl": "Lange Poort",
+        "pt": "Lange poort"
       },
       "description": {
         "en": "A historic city gate marking an important event during the Eighty Years' War.",
         "nl": "Een historische stadspoort die een belangrijk evenement tijdens de Tachtigjarige Oorlog markeert.",
         "pt": "Um portão histórico da cidade que marca um evento importante durante a Guerra dos Oitenta Anos."
       },
-      "latitude": 51.9012,
-      "longitude": 4.1645
+      "latitude": 51.90614031311541,
+      "longitude": 4.160866042216834
     },
     {
       "id": "5",
@@ -102,8 +102,8 @@
         "nl": "Een gerestaureerde molen die een kijkje biedt in traditionele Nederlandse maaltechnieken.",
         "pt": "Um moinho restaurado que oferece um vislumbre das técnicas tradicionais de moagem holandesas."
       },
-      "latitude": 51.9008,
-      "longitude": 4.1639
+      "latitude": 51.90648534173645,
+      "longitude": 4.169748111267633
     },
     {
       "id": "7",
@@ -117,8 +117,8 @@
         "nl": "Een schilderachtig meer, ideaal voor watersport, varen en ontspanning.",
         "pt": "Um lago pitoresco perfeito para esportes aquáticos, passeios de barco e relaxamento."
       },
-      "latitude": 51.9111,
-      "longitude": 4.15
+      "latitude": 51.914485601484955,
+      "longitude": 4.1730170019091934
     },
     {
       "id": "8",
@@ -151,21 +151,6 @@
       "longitude": 4.1638
     },
     {
-      "id": "10",
-      "title": {
-        "en": "Brielle Windmill",
-        "nl": "Brielse Molen",
-        "pt": "Moinho Brielle"
-      },
-      "description": {
-        "en": "A historic windmill, one of the iconic landmarks of Brielle, providing a picturesque view of the town.",
-        "nl": "Een historische molen, een van de iconische bezienswaardigheden van Brielle, met een schilderachtig uitzicht op de stad.",
-        "pt": "Um moinho histórico, um dos marcos icônicos de Brielle, oferecendo uma vista pitoresca da cidade."
-      },
-      "latitude": 51.9013,
-      "longitude": 4.1647
-    },
-    {
       "id": "11",
       "title": {
         "en": "Slechts 3 Dagen Museum",
@@ -183,17 +168,17 @@
     {
       "id": "12",
       "title": {
-        "en": "De Doelen",
-        "nl": "De Doelen",
-        "pt": "De Doelen"
+        "en": "The Synagogue",
+        "nl": "De Synagoge",
+        "pt": "A Sinagoga"
       },
       "description": {
-        "en": "A beautiful old building, once a theater, now used for cultural events.",
-        "nl": "Een prachtig oud gebouw, ooit een theater, nu gebruikt voor culturele evenementen.",
-        "pt": "Um belo edifício antigo, que já foi um teatro, agora usado para eventos culturais."
+        "en": "The Sjoel is a cultural, historical monument in the center of Brielle.",
+        "nl": "De Sjoel is een cultureel, historisch monument in het centrum van Brielle.",
+        "pt": "A Sjoel é um monumento cultural e histórico no centro de Brielle."
       },
-      "latitude": 51.9011,
-      "longitude": 4.1643
+      "latitude": 51.90138462976996,
+      "longitude": 4.165204725018886
     },
     {
       "id": "13",
@@ -213,17 +198,17 @@
     {
       "id": "14",
       "title": {
-        "en": "Brielle Castle",
-        "nl": "Kasteel van Brielle",
-        "pt": "Castelo de Brielle"
+        "en": "Arsenal",
+        "nl": "Arsenaal",
+        "pt": "Arsenal"
       },
       "description": {
-        "en": "The site of the former Brielle Castle, now a public park, offering a look at the town’s feudal past.",
-        "nl": "De locatie van het voormalige Kasteel van Brielle, nu een openbaar park, biedt een kijkje in het feodale verleden van de stad.",
-        "pt": "O local do antigo Castelo de Brielle, agora um parque público, oferecendo uma visão do passado feudal da cidade."
+        "en": "Built in 1708 as a storage for cannons and guns.",
+        "nl": "Gebouwd in 1708 als wapenopslag voor kanonnen en geweren.",
+        "pt": "Construído em 1708 como armazenamento para canhões e armas."
       },
-      "latitude": 51.9003,
-      "longitude": 4.1653
+      "latitude": 51.90408233709265,
+      "longitude": 4.166743378985213
     },
     {
       "id": "15",
@@ -237,8 +222,8 @@
         "nl": "Een historische kade, ooit centraal in de visserij-industrie van Brielle, nu een rustige plek om te ontspannen.",
         "pt": "Um cais histórico, uma vez central para a indústria pesqueira de Brielle, agora um lugar tranquilo para relaxar."
       },
-      "latitude": 51.9021,
-      "longitude": 4.1632
+      "latitude": 51.906716519617646,
+      "longitude": 4.1684809424151705
     },
     {
       "id": "16",
@@ -286,21 +271,6 @@
       "longitude": 4.1651
     },
     {
-      "id": "19",
-      "title": {
-        "en": "De Poldermolen",
-        "nl": "De Poldermolen",
-        "pt": "Moinho De Polder"
-      },
-      "description": {
-        "en": "A charming traditional Dutch windmill, offering a beautiful view of the surrounding fields and landscape.",
-        "nl": "Een charmante traditionele Nederlandse windmolen, met een prachtig uitzicht op de omliggende velden en het landschap.",
-        "pt": "Um moinho tradicional holandês encantador, com uma vista maravilhosa dos campos e paisagens ao redor."
-      },
-      "latitude": 51.9005,
-      "longitude": 4.164
-    },
-    {
       "id": "20",
       "title": {
         "en": "The Gatehouse of Brielle",
@@ -312,8 +282,8 @@
         "nl": "Een oud poortwachterhuis dat ooit de ingang van de ommuurde stad Brielle markeerde.",
         "pt": "Uma antiga casa de portão que marcava a entrada da cidade murada de Brielle."
       },
-      "latitude": 51.9019,
-      "longitude": 4.1649
+      "latitude": 51.907303007984254,
+      "longitude": 4.167926957759916
     },
     {
       "id": "21",
@@ -327,23 +297,23 @@
         "nl": "Een kenmerkende watertoren die panoramische uitzichten biedt op de omliggende omgeving.",
         "pt": "Uma torre de água distinta, oferecendo vistas panorâmicas da área ao redor."
       },
-      "latitude": 51.9035,
-      "longitude": 4.1628
+      "latitude": 51.89823778061695,
+      "longitude": 4.160009640363425
     },
     {
       "id": "22",
       "title": {
-        "en": "The Fisherman's Church",
-        "nl": "De Visserskerk",
-        "pt": "Igreja dos Pescadores"
+        "en": "Asylum Square",
+        "nl": "Asylplein",
+        "pt": "Praça do Asilo"
       },
       "description": {
-        "en": "A small church near the harbor, historically associated with Brielle's fishing community.",
-        "nl": "Een kleine kerk bij de haven, historisch verbonden met de vissersgemeenschap van Brielle.",
-        "pt": "Uma pequena igreja perto do porto, historicamente associada à comunidade pesqueira de Brielle."
+        "en": "Home for old and infirm seamen. First stone laid in 1872 by King Willem III.",
+        "nl": "Huis voor oude en gebrekkige zeelieden. Eerste steen gelegd in 1872 door Koning Willem III.",
+        "pt": "Casa para marinheiros idosos e enfermos. Primeira pedra colocada em 1872 pelo Rei Willem III."
       },
-      "latitude": 51.9031,
-      "longitude": 4.163
+      "latitude": 51.90461647654059,
+      "longitude": 4.163799084544441
     },
     {
       "id": "23",
@@ -363,17 +333,17 @@
     {
       "id": "24",
       "title": {
-        "en": "Brielle's City Fountain",
-        "nl": "De Fontein van Brielle",
-        "pt": "A Fonte da Cidade de Brielle"
+        "en": "Pilgrim Fathers Church",
+        "nl": "Bedevaartskerk",
+        "pt": "Igreja dos Pais Peregrinos"
       },
       "description": {
-        "en": "A beautiful public fountain located at the center of Brielle's main square.",
-        "nl": "Een mooie openbare fontein gelegen in het centrum van het belangrijkste plein van Brielle.",
-        "pt": "Uma bela fonte pública localizada no centro da praça principal de Brielle."
+        "en": "Church on the site where on July 9, 1572, 19 clerics from",
+        "nl": "Kerk op de plaats waar op 9 juli 1572 19 geestelijken uit Gorcum werden opgehangen.",
+        "pt": "Igreja no local onde, em 9 de julho de 1572, 19 clérigos"
       },
-      "latitude": 51.9021,
-      "longitude": 4.1646
+      "latitude": 51.89530501154512,
+      "longitude": 4.154858355707887
     }
   ]
 }
