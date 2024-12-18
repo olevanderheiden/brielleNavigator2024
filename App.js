@@ -1,19 +1,17 @@
 import React from "react";
 import { createMaterialBottomTabNavigator } from "react-native-paper/react-navigation";
-import { Provider as PaperProvider } from "react-native-paper"; // Provider from react-native-paper
+import { Provider as PaperProvider } from "react-native-paper";
 import { ThemeProvider } from "./objects/logic/theme";
 import AppContent from "./objects/logic/navigationHandling";
-import Toast from "react-native-toast-message"; // Import Toast
-import ToastConfig from "./objects/logic/toastConfig"; // Import ToastConfig
+import ForwardToast from "./objects/logic/forwardToast";
 
-const Tab = createMaterialBottomTabNavigator();
-
+//Main app export and wrapping in ThemeProvider and PaperProvider allows for the use of the theme and toast in the app
 export default function App() {
   return (
     <ThemeProvider>
       <PaperProvider>
         <AppContent />
-        <Toast config={ToastConfig} ref={(ref) => Toast.setRef(ref)} />
+        <ForwardToast />
       </PaperProvider>
     </ThemeProvider>
   );

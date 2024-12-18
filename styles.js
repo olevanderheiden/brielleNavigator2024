@@ -1,33 +1,18 @@
 import { StyleSheet } from "react-native";
 
-// Function to get styles based on the current theme
+// Function to dynamically get styles based on the current theme
 export const getStyles = (theme) => {
   return StyleSheet.create({
     container: {
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: theme.colors.background, // Background color based on theme
+      backgroundColor: theme.colors.background,
     },
+    // Add styles for the map
     map: {
       width: "100%",
       height: "100%",
-    },
-    callout: {
-      flex: 1,
-      position: "relative",
-      padding: 10,
-      backgroundColor: theme.colors.surface,
-      borderRadius: 10,
-      width: 150,
-    },
-    calloutTitle: {
-      fontWeight: "bold",
-      fontSize: 16,
-      marginBottom: 5,
-    },
-    calloutDescription: {
-      fontSize: 14,
     },
     mapStyle: [
       {
@@ -63,12 +48,14 @@ export const getStyles = (theme) => {
         ],
       },
     ],
+    //Add styles for loading screens
     loadingContainer: {
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: theme.colors.background,
     },
+    // Add styles for the text
     title: {
       fontSize: 24,
       color: theme.colors.onBackground,
@@ -80,6 +67,7 @@ export const getStyles = (theme) => {
       color: theme.colors.onBackground,
       marginBottom: 20,
     },
+    // Add styles for the buttons and button containers
     buttonContainer: {
       flexDirection: "row",
       justifyContent: "space-between",
@@ -92,12 +80,18 @@ export const getStyles = (theme) => {
       justifyContent: "center",
       margin: 4,
     },
+    buttonText: {
+      color: theme.colors.onBackground,
+      fontSize: 10,
+    },
+    // Add styles for deviders that separate items
     devider: {
       height: 1,
       backgroundColor: theme.colors.onBackground,
       width: "100%",
       marginBottom: 10,
     },
+    // Add styles for view containers
     View: {
       flex: 1,
       justifyContent: "center",
@@ -110,6 +104,7 @@ export const getStyles = (theme) => {
       borderBottomColor: theme.colors.border,
       borderBottomWidth: 1,
     },
+    // Add styles for the tab bar and tab bar items
     tabBar: {
       backgroundColor: theme.colors.background,
     },
@@ -128,10 +123,7 @@ export const getStyles = (theme) => {
       color: theme.colors.primary,
       backgroundColor: theme.colors.background,
     },
-    buttonText: {
-      color: theme.colors.onBackground,
-      fontSize: 10,
-    },
+    // Add styles for the toast and toast content
     toastSuccess: {
       backgroundColor: theme.colors.background,
       borderColor: "rgba(3, 252, 15, 0.29)",

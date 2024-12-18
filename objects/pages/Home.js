@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import { useTheme } from "../../objects/logic/theme";
 import { getStyles } from "../../styles";
 
+// HomeView is the home screen of the app that provides an overview of the app's functionality
 export default function HomeView() {
   const { theme } = useTheme();
   const styles = getStyles(theme);

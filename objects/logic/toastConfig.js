@@ -3,11 +3,12 @@ import { View, Text } from "react-native";
 import { useTheme } from "./theme";
 import { getStyles } from "../../styles";
 
+// ToastConfig is an object that contains the configuration for the toast messages and ensures they are styled according to the theme
 const ToastConfig = {
+  //success toast message styling setup
   success: ({ text1, text2, ...rest }) => {
     const { theme } = useTheme();
     const styles = getStyles(theme);
-    console.log(styles.backgroundColor);
     return (
       <View style={[styles.toastSuccess, { padding: 10 }]}>
         <View style={styles.toastSuccesBar} />
@@ -18,6 +19,7 @@ const ToastConfig = {
       </View>
     );
   },
+  //info toast message styling setup
   info: ({ text1, text2, ...rest }) => {
     const { theme } = useTheme();
     const styles = getStyles(theme);

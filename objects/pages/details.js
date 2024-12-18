@@ -4,10 +4,9 @@ import { useTheme } from "../logic/theme";
 import { getStyles } from "../../styles";
 
 export default function Details({ route }) {
-  // Get styles from theme
+  // Get the current theme and styles
   const { theme } = useTheme();
   const styles = getStyles(theme);
-  // Destructure landmark object passed from navigation
   const { landMarkObject } = route.params;
   const { title, description, latitude, longitude } = landMarkObject;
 

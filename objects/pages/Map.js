@@ -8,7 +8,8 @@ import updateFavoriteStatus from "../logic/favoritesHandling"; // Import the fun
 import { useNavigation } from "@react-navigation/native";
 
 export default function ViewMap() {
-  const { theme } = useTheme(); // Get the current theme from context
+  // Get the current theme and styles
+  const { theme } = useTheme();
   const styles = getStyles(theme);
   const navigation = useNavigation();
   const [favorites, setFavorites] = useState([]); // Store favorite landmarks
@@ -52,7 +53,7 @@ export default function ViewMap() {
     getLocation();
   }, []);
 
-  // Fetch markers data from the API
+  // Fetch markers data from the API and initialize the map
   useEffect(() => {
     const getLocations = async () => {
       try {
@@ -67,7 +68,7 @@ export default function ViewMap() {
       }
     };
 
-    getLocations(); // Fetch the locations when the component is mounted
+    getLocations();
   }, []);
 
   // If data or location is not loaded, display loading message
@@ -110,7 +111,7 @@ export default function ViewMap() {
           />
         ))}
 
-        {/* Custom marker for user's location */}
+        {/* Markert to display users location*/}
         {location && (
           <Marker
             coordinate={{

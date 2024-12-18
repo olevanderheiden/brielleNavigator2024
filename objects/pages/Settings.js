@@ -5,18 +5,22 @@ import { getStyles } from "../../styles";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function SettingsView() {
+  //Get the current theme and styles
   const { theme, isDarkMode, setTheme } = useTheme();
   const styles = getStyles(theme);
 
   return (
+    //View with the current theme and a button to switch the theme
     <SafeAreaView style={styles.View}>
       <Text style={styles.title}>Settings</Text>
       <Text style={styles.text}>
+        {/*Display the current theme*/}
         Current Theme: {isDarkMode ? "Dark" : "Light"}
       </Text>
       <View style={styles.buttonContainer}>
         <Button
           style={styles.buttonStyle}
+          //Switch the theme when the button is pressed
           title={`Switch to ${isDarkMode ? "Light" : "Dark"} Theme`}
           onPress={() => setTheme(!isDarkMode)}
         />

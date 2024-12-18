@@ -8,15 +8,17 @@ import updateFavoriteStatus from "../logic/favoritesHandling";
 import { useFocusEffect, useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+//change loaded to inform the component that the data has been loaded
 export function changeLoaded() {
   setLoaded(false);
 }
+
+//default overcoopling function for loading showing and updating the favorites from the AsyncStorage
 export default function FavoritesView() {
+  // Get the current theme and styles
   const { theme } = useTheme();
   const styles = getStyles(theme);
-  const navigation = useNavigation(); // Get the navigation object
-
-  console.log("FavoritesView rendered");
+  const navigation = useNavigation();
   // Initialize state for local data and loading status
   const [localData, setLocalData] = useState([]);
   const [loaded, setLoaded] = useState(false);
@@ -36,15 +38,15 @@ export default function FavoritesView() {
       } else {
         setLocalData([]);
       }
-
+      // Set loaded to true after loading the data
       setLoaded(true);
     } catch (error) {
       console.error("Error loading favorites:", error);
-      setLoaded(true); // Set loading to true even in case of error
+      setLoaded(true);
     }
   }
 
-  // Item component for rendering the list of favorites
+  //per item in the list of favorites, show the title and two buttons to remove the item or view the details
   const Item = ({ landMarkObject }) => (
     <View style={styles.container}>
       <Text style={styles.text}>
@@ -97,7 +99,9 @@ export default function FavoritesView() {
         <Text style={styles.title}>Loading...</Text>
       </View>
     );
-  } else {
+  }
+  //Show the favorites list if the data is loaded
+  else {
     return (
       <SafeAreaView style={styles.View}>
         <Text style={styles.title}>Favorites List</Text>

@@ -12,12 +12,15 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { createStackNavigator } from "@react-navigation/stack";
 import Details from "../pages/details";
 
+//creating navigators for the app
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 
+//Handling favorites visibility
 let isFavoritesVisible = false;
 let setIsFavoritesVisible = () => {};
 
+//updating the visibility of the favorites tab
 export const checkFavorites = async () => {
   try {
     const storedFavorites = await AsyncStorage.getItem("@favorites");
@@ -32,17 +35,20 @@ export const checkFavorites = async () => {
   }
 };
 
+//Main app content and navigation handling
 export default function AppContent() {
   const { theme } = useTheme(); // Get the current theme from context
   const styles = getStyles(theme);
   const [favoritesVisible, setFavoritesVisible] = useState(isFavoritesVisible);
   setIsFavoritesVisible = setFavoritesVisible;
 
+  //initializing the favorites visibility
   useEffect(() => {
     checkFavorites();
   }, []);
 
   return (
+    //Navigation container for the app(react-navigation tabbar)
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="MainTabs" options={{ headerShown: false }}>
