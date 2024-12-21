@@ -8,9 +8,9 @@
         "pt": "Igreja de Santa Catarina"
       },
       "description": {
-        "en": "A stunning Gothic church located in the heart of Brielle, known for its towering spire and rich history.",
-        "nl": "Een prachtige gotische kerk in het hart van Brielle, bekend om zijn torenhoge torenspits en rijke geschiedenis.",
-        "pt": "Uma impressionante igreja gótica localizada no coração de Brielle, conhecida por sua torre alta e rica história."
+        "en": "A stunning Gothic church located in the heart of Brielle, known for its 57 meter high and rich history.",
+        "nl": "Een prachtige gotische kerk in het hart van Brielle, bekend om zijn 57 meter hoge toren en rijke geschiedenis.",
+        "pt": "Uma impressionante igreja gótica localizada no coração de Brielle, conhecida por sua torre de 57 metros de altura e rica história."
       },
       "latitude": 51.90311,
       "longitude": 4.16238
@@ -69,7 +69,7 @@
       },
       "description": {
         "en": "A historic city gate marking an important event during the Eighty Years' War.",
-        "nl": "Een historische stadspoort die een belangrijk evenement tijdens de Tachtigjarige Oorlog markeert.",
+        "nl": "Een historische stadspoort die een belangrijke gebeurtenis tijdens de Tachtigjarige Oorlog markeert.",
         "pt": "Um portão histórico da cidade que marca um evento importante durante a Guerra dos Oitenta Anos."
       },
       "latitude": 51.90614031311541,
@@ -83,9 +83,9 @@
         "pt": "Memorial dos Mártires de Gorcum"
       },
       "description": {
-        "en": "A solemn memorial dedicated to the 19 Catholic clerics martyred in 1572.",
-        "nl": "Een plechtig monument ter nagedachtenis aan de 19 katholieke geestelijken die in 1572 werden gemarteld.",
-        "pt": "Um memorial solene dedicado aos 19 clérigos católicos martirizados em 1572."
+        "en": "A memorial dedicated to the 19 Catholic clerics martyred in 1572.",
+        "nl": "Een monument ter nagedachtenis aan de 19 katholieke geestelijken die in 1572 werden gemarteld.",
+        "pt": "Um memorial dedicado aos 19 clérigos católicos martirizados em 1572."
       },
       "latitude": 51.903,
       "longitude": 4.1655
@@ -218,7 +218,7 @@
         "pt": "Cais dos Pescadores de Brielle"
       },
       "description": {
-        "en": "A historical quay, once central to Brielle’s fishing industry, now a peaceful spot to relax.",
+        "en": "A historical quay, once central to the fishing industry of Brielle, now a peaceful spot to relax.",
         "nl": "Een historische kade, ooit centraal in de visserij-industrie van Brielle, nu een rustige plek om te ontspannen.",
         "pt": "Um cais histórico, uma vez central para a indústria pesqueira de Brielle, agora um lugar tranquilo para relaxar."
       },
@@ -259,7 +259,7 @@
       "id": "18",
       "title": {
         "en": "Brielle Memorial",
-        "nl": "Brielse Herdenkingsmonument",
+        "nl": "Briels Herdenkingsmonument",
         "pt": "Monumento Memorial de Brielle"
       },
       "description": {

@@ -43,8 +43,8 @@ export default function ViewMap() {
         // If permission is denied, use the default region (Brielle)
         setRegion(defaultRegion);
         Alert.alert(
-          "Location Permission Needed",
-          "This app requires location permissions to show your position on the map. You can enable it in app settings.",
+          "Locatie permissie vereist",
+          "Deze app heeft locatiepermissies nodig om uw positie op de kaart weer te geven. U kunt dit inschakelen in de app-instellingen op uw mobiele apparaat.",
           [{ text: "OK" }]
         );
       }
@@ -111,7 +111,7 @@ export default function ViewMap() {
           />
         ))}
 
-        {/* Markert to display users location*/}
+        {/* Marker to display users location*/}
         {location && (
           <Marker
             coordinate={{
@@ -119,8 +119,8 @@ export default function ViewMap() {
               longitude: location.longitude,
             }}
             pinColor="blue"
-            title="Your Location"
-            description="You are here"
+            title="Uw locatie"
+            description="U bevindt zich hier."
           />
         )}
       </MapView>

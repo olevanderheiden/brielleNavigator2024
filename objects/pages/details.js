@@ -20,7 +20,7 @@ export default function Details({ route }) {
 
       {/* Coordinates */}
       <Text style={styles.text}>
-        Coordinaten: {latitude}, {longitude}
+        Coördinaten: {latitude}, {longitude}
       </Text>
     </ScrollView>
   );

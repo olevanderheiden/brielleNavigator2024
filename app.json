@@ -5,12 +5,18 @@
     "version": "1.0.0",
     "newArchEnabled": true,
     "platforms": [
-      "ios",
-      "android",
-      "web"
+      "android"
     ],
     "plugins": [
       "expo-localization"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7b021172-7c62-4d39-aa9e-1a3c97f437cc"
+      }
+    },
+    "android": {
+      "package": "com.ojvdh.brielleNavigator2024"
+    }
   }
 }

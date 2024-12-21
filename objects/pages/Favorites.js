@@ -50,7 +50,7 @@ export default function FavoritesView() {
   const Item = ({ landMarkObject }) => (
     <View style={styles.container}>
       <Text style={styles.text}>
-        {landMarkObject?.title.nl || "No title available"}
+        {landMarkObject?.title.nl || "Geen titel beschikbaar"}
       </Text>
       <View style={styles.buttonContainer}>
         <Button
@@ -96,7 +96,7 @@ export default function FavoritesView() {
   if (!loaded) {
     return (
       <View style={styles.View}>
-        <Text style={styles.title}>Loading...</Text>
+        <Text style={styles.title}>Bezig met laden...</Text>
       </View>
     );
   }
@@ -104,7 +104,7 @@ export default function FavoritesView() {
   else {
     return (
       <SafeAreaView style={styles.View}>
-        <Text style={styles.title}>Favorites List</Text>
+        <Text style={styles.title}>Favorietenlijst</Text>
         <FlatList
           data={localData}
           renderItem={({ item }) => <Item landMarkObject={item} />}

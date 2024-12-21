@@ -15,13 +15,13 @@ export default function SettingsView() {
       <Text style={styles.title}>Settings</Text>
       <Text style={styles.text}>
         {/*Display the current theme*/}
-        Current Theme: {isDarkMode ? "Dark" : "Light"}
+        Huidig thema: {isDarkMode ? "Donker" : "Licht"}
       </Text>
       <View style={styles.buttonContainer}>
         <Button
           style={styles.buttonStyle}
           //Switch the theme when the button is pressed
-          title={`Switch to ${isDarkMode ? "Light" : "Dark"} Theme`}
+          title={`Switch to ${isDarkMode ? "Licht" : "Donker"} Theme`}
           onPress={() => setTheme(!isDarkMode)}
         />
       </View>

@@ -55,7 +55,7 @@ export default function AppContent() {
           {() => (
             <Tab.Navigator
               initialRouteName="Home"
-              barStyle={styles.tabBar} // Use styles from styles.js
+              barStyle={styles.tabBar}
               screenOptions={({ route }) => ({
                 tabBarIcon: ({ color, size }) => {
                   const iconName = iconMapping[route.name];

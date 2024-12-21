@@ -1,6 +1,6 @@
 import Toast from "react-native-toast-message";
 
-//Toast message for adding or removing a landmark from favorites
+//Toast messages for adding or removing a landmark from favorites
 export default function favoritesToast(landMark, status, styles) {
   // Show a success toast message when a landmark is added to favorites
   if (status) {
