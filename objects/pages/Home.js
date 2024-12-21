@@ -8,7 +8,7 @@ export default function HomeView() {
   const styles = getStyles(theme);
   return (
     <View style={styles.View}>
-      <Text style={styles.title}>Welkom in de Breille Navigatie app 2024</Text>
+      <Text style={styles.title}>Welkom in de Brielle Navigatie app 2024</Text>
       <Text style={styles.text}>
         Deze app is ontworpen om u te helpen bij het verkennen van de stad. Dit
         is hoe het werkt:
